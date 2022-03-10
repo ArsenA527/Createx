@@ -8,23 +8,14 @@ html {
   box-sizing: inherit;
 }
 
-.page {
-  height: 100%;
-  font-family: $font-family, sans-serif;
-  -webkit-text-size-adjust: 100%;
-}
-
-.page__body {
+body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100%;
-  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
 }
 
 img {
-  height: auto;
   max-width: 100%;
-  object-fit: cover;
 }
 
 a {
@@ -36,7 +27,7 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important; // stylelint-disable-line declaration-no-important
 }
 
 .btn-reset {
@@ -52,56 +43,593 @@ a {
   padding: 0;
 }
 
-.input-reset {
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  border-radius: 0;
-  background-color: #fff;
-
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration {
-    display: none;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
+.centered {
+  width: 100%;
+  text-align: center;
 }
 
 .container {
   margin: 0 auto;
-  padding: 0 $container-offset;
-  max-width: $container-width;
+  padding: 0 15px;
+  max-width: 1260px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
 
-.centered {
-  text-align: center;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.main-title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $color-ebony;
+
+  span {
+    color: $color-primary;
+  }
+
+  &--home {
+    color: $color-light;
+  }
+
+  @include minitablet {
+    font-size: 60px;
+    line-height: 75px;
+  }
+
+  @include mobile {
+    font-size: 35px;
+    line-height: 45px;
+  }
 }
 
 .dis-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  overscroll-behavior: none;
+  width: 100%
 }
 
-.page--ios .dis-scroll {
-  position: relative;
+
+.main-descr {
+  margin: 0;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-storm;
+
+  &--home {
+    margin-bottom: 60px;
+    color: $color-light;
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 15px 39px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $color-light;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &--fill {
+    background-color: $color-primary;
+
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: $color-active;
+    }
+
+    &:active {
+      background-color: $color-active;
+    }
+  }
+
+  &--stroke {
+    &-light {
+      border-color: $color-light;
+      color: $color-light;
+    }
+
+    &-primary {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      border-color: $color-primary;
+      background-color: $color-primary;
+    }
+
+    &:active {
+      border-color: $color-primary;
+      background-color: $color-active;
+    }
+  }
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  color: $color-ebony;
+
+  &--center {
+    text-align: center;
+  }
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.descr {
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-storm;
+
+  &--center {
+    text-align: center;
+  }
+
+  @include mobile {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.section-offset {
+  padding-top: 120px;
+
+  @include minitablet {
+    padding-top: 60px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
+}
+
+.custom-checkbox {
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    padding-left: 27px;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-gray;
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 1px;
+    display: inline-block;
+    border: 1px solid $color-primary;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/check.svg");
+    background-position: center;
+    background-size: 10px 8px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__input:checked+&__text::before {
+    background-color: $color-primary;
+  }
+
+  &__input:checked+&__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus+&__text {
+    outline: 3px solid $color-primary;
+  }
+}
+
+.custom-file {
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 170%;
+    color: $color-gray;
+    background-image: url("../img/file-icon.svg");
+    background-position: left center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+  }
+
+  &__input:focus + &__text {
+    outline: 3px solid $color-primary;
+  }
+}
+
+.custom-radio {
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    padding-left: 27px;
+    font-size: 16px;
+    line-height: 160%;
+    color: $color-gray;
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 4px;
+    display: inline-block;
+    border: 1px solid #b3b7bc;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/check-circle.svg");
+    background-position: center;
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__input:checked+&__text::before {
+    border-color: $color-primary;
+  }
+
+  &__input:checked+&__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus+&__text {
+    outline: 3px solid $color-primary;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $grid-gap;
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.to-top {
+  position: fixed;
+  right: calc((100% - 1230px) / 2);
+  bottom: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__text {
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 150%;
+    text-shadow: 3px 3px 11px rgba(150, 150, 150, 1);
+    text-transform: uppercase;
+    color: $color-light;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background: $color-primary;
+    transition: background-color 0.3s ease-in-out;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+    }
+
+    &:hover {
+      background-color: $color-active;
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include middledesk {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.site-modal {
+  border-radius: 4px;
+  padding: 48px;
+  width: 486px;
+
+  .modal__close {
+    right: 24px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/close-modal.svg");
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: $color-ebony;
+  }
+
+  &__field {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .choices {
+    width: 100%;
+  }
+
+  .is-focused {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  .choices__inner {
+    margin: 0;
+    border: 1px solid #d7dadd;
+    border-radius: 4px;
+    padding: 0;
+    height: 52px;
+    background-color: $color-athens;
+  }
+
+  .choices__list--single .choices__placeholder {
+    font-size: 16px;
+    line-height: 160%;
+    color: #9a9ca5;
+    opacity: 1;
+  }
+
+  .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 0;
+  }
+
+  .choices__list--single {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 100%;
+  }
+
+  .choices[data-type*=select-one]:after {
+    right: 19px;
+    margin-top: 0;
+    border: none;
+    width: 14px;
+    height: 7px;
+    background-image: url("../img/angle-down.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .choices[data-type*=select-one].is-open:after {
+    margin-top: -7px;
+    transform: rotate(180deg) translateY(-50%);
+  }
+
+  .choices__list--dropdown .choices__item--selectable:after {
+    display: none;
+  }
+
+  .choices__list--dropdown {
+    background-color: $color-athens;
+  }
+}
+
+.burger {
+  position: absolute;
+  right: 15px;
+  top: 23px;
+  z-index: 1000;
+  display: none;
+  border: none;
+  padding: 0;
+  width: $burger-width;
+  height: $burger-height;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: $burger-line-height;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - $burger-line-height);
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: $burger-line-height;
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger:focus::after {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: rgba(#000, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  @include mobile {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.site-modal {
+  @include mobile {
+    padding: 20px;
+    padding-top: 40px;
+    width: 90%;
+  }
 }
