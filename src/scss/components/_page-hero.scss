@@ -4,7 +4,7 @@
   min-height: 600px;
   background-position: right -8px top;
   background-repeat: no-repeat;
-  background-color: var(--color-athens);
+  background-color: $color-athens;
 
   &__breadcrumbs {
     margin-bottom: 40px;
@@ -19,7 +19,7 @@
     line-height: 130%;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-ebony);
+    color: $color-ebony;
 
     &--small {
       font-size: 64px;
@@ -43,7 +43,7 @@
     max-width: 600px;
     font-size: 20px;
     line-height: 150%;
-    color: var(--color-storm);
+    color: $color-storm;
 
     @include mobile {
       font-size: 16px;
@@ -69,7 +69,7 @@
 
     a.article-meta__item {
       font-weight: 700;
-      color: var(--color-primary);
+      color: $color-primary;
     }
 
     time.article-meta__item {
@@ -100,7 +100,7 @@
 
   &__social {
     svg {
-      fill: var(--color-storm);
+      fill: $color-storm;
       opacity: 1;
     }
   }
@@ -120,7 +120,7 @@
   &--work-inner {
     background-image: url("../img/work-inner-hero-bg.png");
     background-position: right -8px top 48px;
-    background-color: var(--color-light);
+    background-color: $color-light;
   }
 
   &--about {

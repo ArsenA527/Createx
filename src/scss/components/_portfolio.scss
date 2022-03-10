@@ -4,7 +4,7 @@
 }
 
 .portfolio-tabs-nav {
-  --gap: 20px;
+  $gap: 20px;
 
   @include flex-v-center;
 
@@ -12,15 +12,15 @@
   transform: translateY(-60px);
 
   &__item {
-    width: calc((100% - (var(--gap) * 4)) / 5);
+    width: calc((100% - ($gap * 4)) / 5);
 
     &:not(:last-child) {
-      margin-right: var(--gap);
+      margin-right: $gap;
     }
 
     @include minitablet {
       margin-bottom: 20px;
-      width: calc((100% - (var(--gap) * 2)) / 3);
+      width: calc((100% - ($gap * 2)) / 3);
     }
 
     @include mobile {
@@ -37,18 +37,18 @@
     padding: 15px;
     width: 100%;
     min-height: 154px;
-    box-shadow: var(--main-shadow);
-    color: var(--color-primary);
-    background-color: var(--color-light);
+    box-shadow: $main-shadow;
+    color: $color-primary;
+    background-color: $color-light;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
     &--active {
-      color: var(--color-light);
-      background-color: var(--color-primary);
+      color: $color-light;
+      background-color: $color-primary;
       pointer-events: none;
 
       .portfolio-tabs-nav__text {
-        color: var(--color-light);
+        color: $color-light;
       }
     }
   }
@@ -104,7 +104,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 160%;
-  color: var(--color-gray);
+  color: $color-gray;
   transition: color 0.3s ease-in-out;
 
   svg {
@@ -117,28 +117,28 @@
   }
 
   &:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 
   &:hover {
-    color: var(--color-primary);
+    color: $color-primary;
   }
 
   &:hover {
-    color: var(--color-active);
+    color: $color-active;
   }
 }
 
 .portfolio-tabs-nav__btn {
   &:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 
   &:hover {
     .portfolio-tabs-nav__text {
-      color: var(--color-ebony);
+      color: $color-ebony;
     }
   }
 }

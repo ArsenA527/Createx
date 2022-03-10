@@ -42,8 +42,8 @@
   padding: 0 10px;
   padding-top: 87px;
   padding-bottom: 90px;
-  box-shadow: var(--main-shadow);
-  background: var(--color-light);
+  box-shadow: $main-shadow;
+  background: $color-light;
 
   &::before {
     content: "";
@@ -57,7 +57,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: var(--color-ebony);
+    background-color: $color-ebony;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
@@ -77,7 +77,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 
@@ -92,7 +92,7 @@
     margin-bottom: 23px;
     width: 52px;
     height: 52px;
-    fill: var(--color-primary);
+    fill: $color-primary;
     object-fit: cover;
     transition: fill 0.3s ease-in-out;
   }
@@ -103,7 +103,7 @@
     font-size: 20px;
     line-height: 150%;
     text-align: center;
-    color: var(--color-ebony);
+    color: $color-ebony;
     transition: color 0.3s ease-in-out;
 
     @include minidesk {
@@ -127,11 +127,11 @@
     }
 
     .services-item__icon {
-      fill: var(--color-light);
+      fill: $color-light;
     }
 
     .services-item__title {
-      color: var(--color-light);
+      color: $color-light;
     }
   }
 }

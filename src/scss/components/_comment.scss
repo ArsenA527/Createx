@@ -25,37 +25,37 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__time {
     font-size: 14px;
     line-height: 150%;
-    color: var(--color-storm);
+    color: $color-storm;
   }
 
   &__body {
     margin-bottom: 19px;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-gray);
+    color: $color-gray;
 
     a {
       font-weight: 700;
-      color: var(--color-primary);
+      color: $color-primary;
       transition: color 0.3s ease-in-out;
 
       &:focus {
-        outline: 2px solid var(--color-primary);
+        outline: 2px solid $color-primary;
         outline-offset: 2px;
       }
 
       &:hover {
-        color: var(--color-active);
+        color: $color-active;
       }
 
       &:active {
-        color: var(--color-active);
+        color: $color-active;
       }
     }
 
@@ -73,7 +73,7 @@
     display: inline-flex;
     font-size: 14px;
     line-height: 150%;
-    color: var(--color-storm);
+    color: $color-storm;
     transition: color 0.3s ease-in-out;
 
     svg {
@@ -88,16 +88,16 @@
     }
 
     &:focus {
-      outline: 2px solid var(--color-primary);
+      outline: 2px solid $color-primary;
       outline-offset: 2px;
     }
 
     &:hover {
-      color: var(--color-active);
+      color: $color-active;
     }
 
     &:active {
-      color: var(--color-active);
+      color: $color-active;
     }
   }
 

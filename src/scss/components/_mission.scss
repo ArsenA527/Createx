@@ -1,20 +1,21 @@
 .mission {
-  background-color: var(--color-light);
+  $mission-gap: 94px;
 
+  background-color: $color-light;
   &__list {
-    --mission-gap: 94px;
+
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
-    gap: calc(var(--mission-gap) * 2);
+    gap: calc($mission-gap) * 2;
 
     @include tablet {
-      --mission-gap: 30px;
+      $mission-gap: 30px;
     }
 
     @include minitablet {
-      --mission-gap: 10px;
+      $mission-gap: 10px;
     }
 
     @include mobile {
@@ -34,7 +35,7 @@
       &::after {
         content: "";
         position: absolute;
-        right: calc(-1 * var(--mission-gap));
+        right: calc(-1 * $mission-gap);
         top: 0;
         width: 1px;
         height: 100%;
@@ -70,14 +71,14 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__descr {
     margin: 0;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-storm);
+    color: $color-storm;
   }
 }
 
@@ -86,8 +87,8 @@
   top: 92px;
   border-radius: 4px;
   padding: 48px 60px;
-  box-shadow: var(--main-shadow);
-  background-color: var(--color-light);
+  box-shadow: $main-shadow;
+  background-color: $color-light;
 
   &__title {
     margin: 0;
@@ -96,7 +97,7 @@
     font-size: 28px;
     line-height: 150%;
     text-align: center;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__content {

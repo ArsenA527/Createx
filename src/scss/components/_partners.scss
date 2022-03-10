@@ -1,6 +1,6 @@
 .partners {
   padding: 80px 0;
-  background-color: var(--color-athens);
+  background-color: $color-athens;
 
   &__title {
     margin-bottom: 60px;
@@ -27,14 +27,14 @@
 
   &__link {
     &:focus {
-      outline: 2px solid var(--color-primary);
+      outline: 2px solid $color-primary;
       outline-offset: 2px;
     }
   }
 
   &--about {
     padding: 120px 0;
-    background-color: var(--color-light);
+    background-color: $color-light;
 
     .partners__title {
       margin-bottom: 25px;

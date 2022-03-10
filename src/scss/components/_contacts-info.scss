@@ -1,19 +1,21 @@
 .contacts-info {
+  $contacts-gap: 120px;
+
   padding-top: 80px;
   padding-bottom: 120px;
   background-color: #f4f5f7;
 
+  @include minidesk {
+    $contacts-gap: 40px;
+  }
+
   &__list {
-    --contacts-gap: 120px;
+
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 118px;
-    gap: calc(var(--contacts-gap) * 2);
-
-    @include minidesk {
-      --contacts-gap: 40px;
-    }
+    gap: calc($contacts-gap) * 2;
 
     @include minitablet {
       display: block;
@@ -36,7 +38,7 @@
       height: 32px;
 
       svg {
-        fill: var(--color-storm);
+        fill: $color-storm;
         opacity: 1;
       }
     }
@@ -49,7 +51,7 @@
       &::after {
         content: "";
         position: absolute;
-        right: calc(-1 * var(--contacts-gap));
+        right: calc(-1 * $contacts-gap);
         top: 0;
         width: 1px;
         height: 100%;
@@ -71,7 +73,7 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__address {
@@ -80,7 +82,7 @@
     font-style: normal;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__link {
@@ -88,27 +90,27 @@
     margin-bottom: 24px;
     border-bottom: 1px solid currentColor;
     font-size: 16px;
-    color: var(--color-primary);
+    color: $color-primary;
     transition: color 0.3s ease-in-out;
 
     &:focus {
-      outline: 2px solid var(--color-primary);
+      outline: 2px solid $color-primary;
       outline-offset: 2px;
     }
 
     &:hover {
-      color: var(--color-active);
+      color: $color-active;
     }
 
     &:active {
-      color: var(--color-active);
+      color: $color-active;
     }
   }
 
   &__element {
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-storm);
+    color: $color-storm;
 
     &:not(:last-child) {
       margin-bottom: 5px;
@@ -116,7 +118,7 @@
   }
 
   &__value {
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 }
 
@@ -124,15 +126,15 @@
   transition: color 0.3s ease-in-out;
 
   &:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 
   &:hover {
-    color: var(--color-active);
+    color: $color-active;
   }
 
   &:active {
-    color: var(--color-active);
+    color: $color-active;
   }
 }

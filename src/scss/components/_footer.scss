@@ -1,7 +1,7 @@
 .footer {
   padding: 80px 0;
   color: rgba(255, 255, 255, 0.6);
-  background-color: var(--color-ebony);
+  background-color: $color-ebony;
 
   &__left {
     grid-column: 7 span;
@@ -68,7 +68,7 @@
     padding-top: 30px;
     font-size: 12px;
     line-height: 150%;
-    color: var(--color-light);
+    color: $color-light;
 
     span {
       padding-left: 22px;
@@ -91,7 +91,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 150%;
-    color: var(--color-light);
+    color: $color-light;
   }
 
   &__items {
@@ -134,7 +134,7 @@
   line-height: 150%;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--color-light);
+  color: $color-light;
 }
 
 .footer-address {
@@ -155,22 +155,22 @@
       transition: color 0.3s ease-in-out;
 
       &:focus {
-        outline: 2px solid var(--color-primary);
+        outline: 2px solid $color-primary;
         outline-offset: 2px;
       }
 
       &:hover {
-        color: var(--color-light);
+        color: $color-light;
       }
 
       &:active {
-        color: var(--color-light);
+        color: $color-light;
       }
     }
   }
 
   &__name {
-    color: var(--color-light);
+    color: $color-light;
   }
 }
 
@@ -206,16 +206,16 @@
     transition: color 0.3s ease-in-out;
 
     &:focus {
-      outline: 2px solid var(--color-primary);
+      outline: 2px solid $color-primary;
       outline-offset: 2px;
     }
 
     &:hover {
-      color: var(--color-light);
+      color: $color-light;
     }
 
     &:active {
-      color: var(--color-light);
+      color: $color-light;
     }
   }
 

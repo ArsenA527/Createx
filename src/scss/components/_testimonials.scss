@@ -1,6 +1,6 @@
 .testimonials {
   padding-top: 97px;
-  background-color: var(--color-athens);
+  background-color: $color-athens;
 
   &__content {
     max-width: 612px;
@@ -81,7 +81,7 @@
     margin-bottom: 25px;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-gray);
+    color: $color-gray;
   }
 
   &__author {
@@ -91,7 +91,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__author-position {
@@ -99,6 +99,6 @@
     padding-right: 110px;
     font-size: 14px;
     line-height: 150%;
-    color: var(--color-storm);
+    color: $color-storm;
   }
 }

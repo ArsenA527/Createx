@@ -23,8 +23,8 @@
   border-collapse: collapse;
   border-radius: 4px;
   width: 100%;
-  box-shadow: var(--main-shadow);
-  background-color: var(--color-light);
+  box-shadow: $main-shadow;
+  background-color: $color-light;
 
   @include minitablet {
     overflow-x: auto;
@@ -42,7 +42,7 @@
     line-height: 150%;
     text-align: center;
     text-transform: uppercase;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__per {
@@ -50,7 +50,7 @@
     font-size: 18px;
     line-height: 150%;
     text-align: center;
-    color: var(--color-storm);
+    color: $color-storm;
   }
 
   &__th {
@@ -65,7 +65,7 @@
       font-size: 18px;
       line-height: 150%;
       text-align: left;
-      color: var(--color-ebony);
+      color: $color-ebony;
     }
   }
 
@@ -91,7 +91,7 @@
     font-size: 16px;
     line-height: 160%;
     text-align: center;
-    color: var(--color-gray);
+    color: $color-gray;
 
     .btn {
       padding: 0 20px;
@@ -102,7 +102,7 @@
       text-transform: uppercase;
 
       &:focus {
-        outline: 2px solid var(--color-primary);
+        outline: 2px solid $color-primary;
         outline-offset: 2px;
       }
 
@@ -133,7 +133,7 @@
     font-size: 16px;
     line-height: 160%;
     text-align: center;
-    color: var(--color-gray);
+    color: $color-gray;
   }
 
   @include minitablet {

@@ -20,7 +20,7 @@
   &__link {
     font-size: 14px;
     line-height: 150%;
-    color: var(--color-gray);
+    color: $color-gray;
     transition: color 0.3s ease-in-out;
 
     &:not([href]) {
@@ -28,16 +28,16 @@
     }
 
     &:focus {
-      outline: 2px solid var(--color-primary);
+      outline: 2px solid $color-primary;
       outline-offset: 2px;
     }
 
     &:hover {
-      color: var(--color-primary);
+      color: $color-primary;
     }
 
     &:active {
-      color: var(--color-active);
+      color: $color-active;
     }
   }
 

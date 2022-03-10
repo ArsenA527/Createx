@@ -31,7 +31,7 @@
     margin: 0;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-gray);
+    color: $color-gray;
   }
 }
 
@@ -87,19 +87,19 @@
 
     &:focus {
       outline: none;
-      color: var(--color-primary);
+      color: $color-primary;
     }
 
     &:hover {
-      color: var(--color-primary);
+      color: $color-primary;
     }
 
     &:active {
-      color: var(--color-active);
+      color: $color-active;
     }
 
     &--active {
-      color: var(--color-primary);
+      color: $color-primary;
     }
 
     @include tablet {

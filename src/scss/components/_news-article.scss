@@ -2,8 +2,8 @@
   overflow: hidden;
   border-radius: 4px;
   height: 100%;
-  box-shadow: var(--main-shadow);
-  background-color: var(--color-light);
+  box-shadow: $main-shadow;
+  background-color: $color-light;
 
   &__text {
     padding: 20px 24px;
@@ -25,7 +25,7 @@
     margin: 0;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-gray);
+    color: $color-gray;
   }
 
   &__meta {
@@ -36,20 +36,20 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--color-ebony);
+    color: $color-ebony;
     transition: color 0.3s ease-in-out;
 
     &:focus {
-      outline: 2px solid var(--color-primary);
+      outline: 2px solid $color-primary;
       outline-offset: 2px;
     }
 
     &:hover {
-      color: var(--color-primary);
+      color: $color-primary;
     }
 
     &:active {
-      color: var(--color-active);
+      color: $color-active;
     }
   }
 
@@ -71,7 +71,7 @@
 .article-meta {
   font-size: 14px;
   line-height: 150%;
-  color: var(--color-storm);
+  color: $color-storm;
 
   &__item {
     position: relative;
@@ -104,15 +104,15 @@
 
 a.article-meta__item {
   &:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 
   &:hover {
-    color: var(--color-primary);
+    color: $color-primary;
   }
 
   &:active {
-    color: var(--color-active);
+    color: $color-active;
   }
 }

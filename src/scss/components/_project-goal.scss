@@ -32,7 +32,7 @@
     margin-bottom: 27px;
     font-size: 18px;
     line-height: 150%;
-    color: var(--color-gray);
+    color: $color-gray;
   }
 }
 
@@ -42,8 +42,8 @@
   padding-right: 40px;
   width: 495px;
   min-height: 300px;
-  box-shadow: var(--main-shadow);
-  background-color: var(--color-light);
+  box-shadow: $main-shadow;
+  background-color: $color-light;
 
   &__item {
     display: flex;
@@ -60,14 +60,14 @@
     font-size: 16px;
     line-height: 160%;
     text-transform: uppercase;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__value {
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-storm);
+    color: $color-storm;
   }
 
   @include minitablet {

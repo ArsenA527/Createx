@@ -23,7 +23,7 @@
       padding: 50px;
       width: 80%;
       height: 100vh;
-      background-color: var(--color-light);
+      background-color: $color-light;
       transform: translateX(-150%);
       transition: transform 0.3s ease-in-out;
 
@@ -38,7 +38,7 @@
   }
 
   &--main {
-    background-color: var(--color-light);
+    background-color: $color-light;
   }
 
   &--secondary {
@@ -59,7 +59,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 }

@@ -90,7 +90,7 @@
     margin-bottom: 10px;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-gray);
+    color: $color-gray;
   }
 
   .form-field__input {
@@ -122,7 +122,7 @@
   }
 
   .is-focused {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 
@@ -132,7 +132,7 @@
     border-radius: 4px;
     padding: 0;
     height: 52px;
-    background-color: var(--color-athens);
+    background-color: $color-athens;
   }
 
   .choices__list--single .choices__placeholder {
@@ -177,7 +177,7 @@
   }
 
   .choices__list--dropdown {
-    background-color: var(--color-athens);
+    background-color: $color-athens;
   }
 
   @include tablet {

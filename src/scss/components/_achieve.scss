@@ -4,7 +4,7 @@
   background-image: url("../img/achieve-bg.png");
   background-position: right bottom -350px;
   background-repeat: no-repeat;
-  background-color: var(--color-light);
+  background-color: $color-light;
 
   &__item {
     @include flex-column-center;
@@ -51,7 +51,7 @@
     font-weight: 700;
     font-size: 46px;
     line-height: 130%;
-    color: var(--color-primary);
+    color: $color-primary;
 
     @include minidesk {
       font-size: 36px;
@@ -63,7 +63,7 @@
     font-size: 14px;
     line-height: 150%;
     text-align: center;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 
   &__list {
@@ -90,8 +90,8 @@
     padding-right: 40px;
     padding-bottom: 60px;
     width: 735px;
-    box-shadow: var(--main-shadow);
-    background: var(--color-light);
+    box-shadow: $main-shadow;
+    background: $color-light;
 
     @include minidesk {
       left: 0;
@@ -139,7 +139,7 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 150%;
-      color: var(--color-ebony);
+      color: $color-ebony;
 
       &:not(:last-child) {
         margin-bottom: 30px;
@@ -157,7 +157,7 @@
     padding: 20px 53px;
     font-size: 14px;
     line-height: 150%;
-    color: var(--color-storm);
+    color: $color-storm;
     background-image: url("../img/signature.svg");
     background-position: right 65px center;
     background-size: 100px 68px;
@@ -175,6 +175,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-ebony);
+    color: $color-ebony;
   }
 }

@@ -18,14 +18,14 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-ebony);
+    color: $color-ebony;
 
     span {
       margin-right: 10px;
     }
 
     svg {
-      fill: var(--color-storm);
+      fill: $color-storm;
       opacity: 1;
     }
   }
@@ -38,7 +38,7 @@
       margin-bottom: 28px;
       font-size: 16px;
       line-height: 160%;
-      color: var(--color-gray);
+      color: $color-gray;
 
       &:last-child {
         margin-bottom: 0;
@@ -51,7 +51,7 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 150%;
-      color: var(--color-ebony);
+      color: $color-ebony;
     }
 
     h3 {
@@ -60,7 +60,7 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 150%;
-      color: var(--color-ebony);
+      color: $color-ebony;
     }
 
     p {
@@ -68,7 +68,7 @@
       margin-bottom: 28px;
       font-size: 16px;
       line-height: 160%;
-      color: var(--color-gray);
+      color: $color-gray;
     }
 
     blockquote {
@@ -80,7 +80,7 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 150%;
-      color: var(--color-ebony);
+      color: $color-ebony;
 
       &::before {
         content: "";
@@ -108,7 +108,7 @@
       padding: 0;
       font-size: 16px;
       line-height: 160%;
-      color: var(--color-gray);
+      color: $color-gray;
 
       li {
         position: relative;

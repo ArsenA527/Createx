@@ -11,7 +11,7 @@
     border-radius: 100%;
     width: 48px;
     height: 48px;
-    color: var(--color-gray);
+    color: $color-gray;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     svg {
@@ -24,18 +24,18 @@
     }
 
     &:focus {
-      outline: 2px solid var(--color-primary);
+      outline: 2px solid $color-primary;
       outline-offset: 2px;
     }
 
     &:hover {
-      color: var(--color-light);
-      background-color: var(--color-primary);
+      color: $color-light;
+      background-color: $color-primary;
     }
 
     &:active {
-      color: var(--color-light);
-      background-color: var(--color-active);
+      color: $color-light;
+      background-color: $color-active;
     }
   }
 }

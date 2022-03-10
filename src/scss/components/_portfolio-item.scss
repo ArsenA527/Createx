@@ -3,8 +3,8 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: 4px;
-  box-shadow: var(--main-shadow);
-  background: var(--color-light);
+  box-shadow: $main-shadow;
+  background: $color-light;
   transition: transform 0.3s ease-in-out;
 
   &__content {
@@ -21,7 +21,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--color-ebony);
+    color: $color-ebony;
 
     @include minidesk {
       font-size: 18px;
@@ -32,7 +32,7 @@
     display: inline-block;
     font-size: 14px;
     line-height: 150%;
-    color: var(--color-storm);
+    color: $color-storm;
   }
 
   &__btn {
@@ -45,7 +45,7 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: $color-primary;
     transition: 0.3s ease-in-out;
     will-change: margin;
 
@@ -55,7 +55,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 
