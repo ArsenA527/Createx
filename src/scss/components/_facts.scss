@@ -58,9 +58,6 @@
 
 .facts-element {
   &__circle {
-    $progress-stroke: #000;
-    $progress-bg-opacity: 0.3;
-
     position: relative;
     margin-bottom: 20px;
     width: 148px;
@@ -75,30 +72,30 @@
     }
 
     .progress {
-      stroke: $progress-stroke;
+      // stroke: #000;
       transform: rotate(-90deg) translateX(20px);
       transform-origin: center;
     }
 
     .progress-bg {
-      stroke: $progress-stroke;
-      opacity: $progress-bg-opacity;
+      // stroke: #000;
+      opacity: 0.3;
     }
 
     &--one-color {
-      --progress-stroke: #f89828;
+      stroke: #f89828;
     }
 
     &--two-color {
-      --progress-stroke: #f52f6e;
+      stroke: #f52f6e;
     }
 
     &--three-color {
-      --progress-stroke: #5a87fc;
+      stroke: #5a87fc;
     }
 
     &--four-color {
-      --progress-stroke: #03cea4;
+      stroke: #03cea4;
     }
   }
 
