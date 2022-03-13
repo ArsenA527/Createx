@@ -85,7 +85,7 @@
     padding: 11px 30px;
     font-size: 14px;
     letter-spacing: 0.5px;
-    transition: color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:focus {
       outline: 2px solid $color-primary;
@@ -93,7 +93,8 @@
     }
 
     &:hover {
-      color: $color-active;
+      background-color: $color-primary;
+      color: $color-light;
     }
 
     &:active {

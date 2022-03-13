@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from '../vendor/swiper.min.js';
 
 const bodyStyles = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyles.getPropertyValue('--grid-gap'));
