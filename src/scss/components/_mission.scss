@@ -22,6 +22,7 @@
   }
 
   &__item {
+    $mission-gap: 94px;
     position: relative;
     padding-top: 71px;
     text-align: center;
@@ -60,6 +61,18 @@
       &:not(:last-child) {
         margin-bottom: 30px;
       }
+    }
+
+    @include tablet {
+      $mission-gap: 30px;
+    }
+
+    @include minitablet {
+      $mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
     }
   }
 

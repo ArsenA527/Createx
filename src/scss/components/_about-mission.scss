@@ -6,8 +6,6 @@
   background-color: #f4f5f7;
 
   &__list {
-
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: calc($about-mission-gap) * 2;
